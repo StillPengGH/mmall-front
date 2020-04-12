@@ -1,0 +1,34 @@
+{
+  "name": "mmall-front",
+  "version": "1.0.0",
+  "description": "mmall front code",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "cross-env WEBPACK_ENV=development webpack-dev-server --config webpack.config.js",
+    "build":"cross-env WEBPACK_ENV=production webpack --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StillPengGH/mmall-front.git"
+  },
+  "author": "still peng",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/StillPengGH/mmall-front/issues"
+  },
+  "homepage": "https://github.com/StillPengGH/mmall-front#readme",
+  "devDependencies": {
+    "cross-env": "^7.0.2",
+    "css-loader": "^3.5.1",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "file-loader": "^6.0.0",
+    "html-loader": "^1.1.0",
+    "html-webpack-plugin": "^4.2.0",
+    "style-loader": "^1.1.3",
+    "url-loader": "^4.1.0",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  }
+}
