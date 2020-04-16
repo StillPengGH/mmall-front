@@ -1,9 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-<%= require('html-loader!./header.html') %>
+
+<head>
+  <%= require('html-loader!./layout/header-common.html') %>
+  <title><%= htmlWebpackPlugin.options.title%></title>
+</head>
 
 <body>
-
+  <%= require('html-loader!./layout/nav.html')%>
+  <%= require('html-loader!./layout/header.html')%>
+  <div class="page-wrap w">
+    <%= require('html-loader!./layout/nav-side.html')%>
+    <div class="content with-nav">test content</div>
+  </div>
+  <%= require('html-loader!./layout/footer.html')%>
 </body>
-  <h3>12345678890</h3>
+
 </html>

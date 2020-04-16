@@ -5,28 +5,43 @@ const HtmlWebpackPulgin = require('html-webpack-plugin')
 // 判断当前环境变量是否是“开发环境”
 const isDev = process.env.WEBPACK_ENV == 'development'
 
-var getHtmlConfig = function (htmlName) {
+var getHtmlConfig = function (htmlName, title) {
 	return {
 		template: './src/view/' + htmlName + '.html',
 		filename: 'view/' + htmlName + '.html',
 		inject: true,
 		hash: true,
+		title: title,
 		chunks: ['common', htmlName],
 	}
 }
-
 var config = {
+	// 入口
 	entry: {
-		index: ['./src/page/index.js'],
-		a: ['./src/page/a.js'],
+		common: ['./src/page/common/index.js'],
+		index: ['./src/page/index/index.js'],
+		result: ['./src/page/result/index.js'],
 	},
+	// 出口
 	output: {
 		path: path.resolve(__dirname, 'dist'),
 		filename: 'js/[name].bundle.js',
 	},
+	// 引入jquery（cdn方式），减少项目体积
 	externals: {
 		jquery: 'window.jQuery',
 	},
+	// 项目目录别名
+	resolve: {
+		alias: {
+			node_modules: path.join(__dirname, 'node_modules'),
+			util: path.join(__dirname, 'src/util'),
+			page: path.join(__dirname, 'src/page'),
+			service: path.join(__dirname, 'src/service'),
+			image: path.join(__dirname, 'src/image'),
+		},
+	},
+	// loader
 	module: {
 		rules: [
 			{
@@ -50,30 +65,36 @@ var config = {
 				],
 			},
 			{
-				test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+				test: /\.(woff(2)?|eot|ttf|otf)(\?.*)?$/,
 				use: [
 					{
 						loader: 'url-loader',
 						options: {
 							limit: 2048,
 							name: '[name].[hash:8].[ext]',
-							outputPath: 'static/img/',
+							outputPath: '/css/common',
 						},
 					},
 				],
 			},
+			{
+				test: /\.string$/,
+				loader: 'html-loader',
+			},
 		],
 	},
 	plugins: [
-		new ExtractTextPlugin('/css/[name].css'),
-		new HtmlWebpackPulgin(getHtmlConfig('index')),
-		new HtmlWebpackPulgin(getHtmlConfig('a')),
+		// 把css单独打包到文件里，否则将会打包在js文件中
+		new ExtractTextPlugin('css/[name]/[name].css'),
+		// html模板处理
+		new HtmlWebpackPulgin(getHtmlConfig('index', '首页')),
+		new HtmlWebpackPulgin(getHtmlConfig('result', '操作结果页')),
 	],
 	optimization: {
 		splitChunks: {
 			minSize: 10,
 			cacheGroups: {
-				default: {
+				common: {
 					name: 'common', // 提取出来公共模块的名称
 					chunks: 'initial', // 指定哪些chunk参与拆分
 					minChunks: 2, // 模块被引用次数大于等于2才被提取
@@ -102,11 +123,13 @@ var config = {
 if (isDev) {
 	config.devServer = {
 		contentBase: './dist', // 服务器所加载文件目录
-		host: 'localhost',
+		// host: 'localhost',
+		host: 'localhost.charlesproxy.com',
 		port: '8089',
 		inline: true, // 是否试试刷新
 		historyApiFallback: true, //找不到页面默认跳index.html
-		open: true,
+		// open: true, 我们在package.json中使用--open了，这里就不用了
+		disableHostCheck: true,
 	}
 }
 
