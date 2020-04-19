@@ -6,8 +6,8 @@
 }
 
 .nav-side .nav-item {
-  line-height: 25px;
-  font-size: 13px;
+  line-height: 30px;
+  font-size: 15px;
 }
 
 .nav-side .nav-item .link {
@@ -16,6 +16,7 @@
 
 .nav-side .nav-item.active .link {
   color: #c60023;
+  font-weight: bold;
 }
 
 

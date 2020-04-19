@@ -17,6 +17,10 @@
   display: none;
 }
 
+.nav .user-info .user.login .username{ 
+  margin-right: 10px;
+}
+
 /* 导航链接菜单 */
 .nav .nav-list {
   float: right;

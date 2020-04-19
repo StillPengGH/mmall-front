@@ -42,7 +42,7 @@ var commonUtils = {
 	doLogin: function () { // 去登录页
 		// 这里需要记录当前路径，以便登录后直接返回当前页面，并对当前页面url进行编码（防止特殊字符被截断问题）
 		window.location.href =
-			'./login.html?redirect=' + encodeURIComponent(window.location.href)
+			'./user-login.html?redirect=' + encodeURIComponent(window.location.href)
   },
   goHome:function(){ // 去首页
     window.location.href = './index.html'
@@ -77,7 +77,7 @@ var commonUtils = {
 		alert(msg || '哪里不对了~')
 	},
 	// 8.字段的验证：支持非空、手机、邮箱
-	validate: function (value, type) {
+	validata: function (value, type) {
 		var value = $.trim(value)
 		// 非空验证
 		if ('require' === type) {

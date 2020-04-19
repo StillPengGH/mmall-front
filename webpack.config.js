@@ -21,6 +21,12 @@ var config = {
 		common: ['./src/page/common/index.js'],
 		index: ['./src/page/index/index.js'],
 		result: ['./src/page/result/index.js'],
+		'user-login': ['./src/page/user-login/index.js'],
+		'user-register': ['./src/page/user-register/index.js'],
+		'user-pass-reset': ['./src/page/user-pass-reset/index.js'],
+		'user-pass-update': ['./src/page/user-pass-update/index.js'],
+		'user-center': ['./src/page/user-center/index.js'],
+		'user-center-update': ['./src/page/user-center-update/index.js'],
 	},
 	// 出口
 	output: {
@@ -88,7 +94,13 @@ var config = {
 		new ExtractTextPlugin('css/[name]/[name].css'),
 		// html模板处理
 		new HtmlWebpackPulgin(getHtmlConfig('index', '首页')),
-		new HtmlWebpackPulgin(getHtmlConfig('result', '操作结果页')),
+		new HtmlWebpackPulgin(getHtmlConfig('result', '操作结果')),
+		new HtmlWebpackPulgin(getHtmlConfig('user-login', '用户登录')),
+		new HtmlWebpackPulgin(getHtmlConfig('user-register', '用户注册')),
+    new HtmlWebpackPulgin(getHtmlConfig('user-pass-reset', '密码重置')),
+    new HtmlWebpackPulgin(getHtmlConfig('user-pass-update', '密码修改')),
+		new HtmlWebpackPulgin(getHtmlConfig('user-center', '用户中心')),
+    new HtmlWebpackPulgin(getHtmlConfig('user-center-update', '用户中心')),
 	],
 	optimization: {
 		splitChunks: {
