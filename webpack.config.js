@@ -66,6 +66,7 @@ var config = {
 							limit: 4096, // 小于4kb则图片转为base64编码，大于则转为图片
 							name: '[name].[hash:8].[ext]', // 打包后图片名称[ext]指图片格式
 							outputPath: '/static/img/', // 输出路径
+							esModule: false,
 						},
 					},
 				],
@@ -84,7 +85,7 @@ var config = {
 				],
 			},
 			{
-				test: /\.string$/,
+				test: /\.(string)$/,
 				loader: 'html-loader',
 			},
 		],
@@ -97,10 +98,10 @@ var config = {
 		new HtmlWebpackPulgin(getHtmlConfig('result', '操作结果')),
 		new HtmlWebpackPulgin(getHtmlConfig('user-login', '用户登录')),
 		new HtmlWebpackPulgin(getHtmlConfig('user-register', '用户注册')),
-    new HtmlWebpackPulgin(getHtmlConfig('user-pass-reset', '密码重置')),
-    new HtmlWebpackPulgin(getHtmlConfig('user-pass-update', '密码修改')),
+		new HtmlWebpackPulgin(getHtmlConfig('user-pass-reset', '密码重置')),
+		new HtmlWebpackPulgin(getHtmlConfig('user-pass-update', '密码修改')),
 		new HtmlWebpackPulgin(getHtmlConfig('user-center', '用户中心')),
-    new HtmlWebpackPulgin(getHtmlConfig('user-center-update', '用户中心')),
+		new HtmlWebpackPulgin(getHtmlConfig('user-center-update', '用户中心')),
 	],
 	optimization: {
 		splitChunks: {
