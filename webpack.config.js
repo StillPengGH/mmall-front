@@ -19,9 +19,11 @@ var config = {
 	// 入口
 	entry: {
 		common: ['./src/page/common/index.js'],
-		index: ['./src/page/index/index.js'],
 		result: ['./src/page/result/index.js'],
-		'user-login': ['./src/page/user-login/index.js'],
+    index: ['./src/page/index/index.js'],
+    list:['./src/page/list/index.js'],
+    detail:['./src/page/detail/index.js'],
+    'user-login': ['./src/page/user-login/index.js'],
 		'user-register': ['./src/page/user-register/index.js'],
 		'user-pass-reset': ['./src/page/user-pass-reset/index.js'],
 		'user-pass-update': ['./src/page/user-pass-update/index.js'],
@@ -94,7 +96,9 @@ var config = {
 		// 把css单独打包到文件里，否则将会打包在js文件中
 		new ExtractTextPlugin('css/[name]/[name].css'),
 		// html模板处理
-		new HtmlWebpackPulgin(getHtmlConfig('index', '首页')),
+    new HtmlWebpackPulgin(getHtmlConfig('index', '首页')),
+    new HtmlWebpackPulgin(getHtmlConfig('list','产品列表')),
+		new HtmlWebpackPulgin(getHtmlConfig('detail', '产品详情页')),
 		new HtmlWebpackPulgin(getHtmlConfig('result', '操作结果')),
 		new HtmlWebpackPulgin(getHtmlConfig('user-login', '用户登录')),
 		new HtmlWebpackPulgin(getHtmlConfig('user-register', '用户注册')),
