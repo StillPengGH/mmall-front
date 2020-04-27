@@ -29,7 +29,8 @@ const userCenterPage = {
 				$('.pannel-body').html(userHtml)
 			},
 			function (errMsg) {
-				commonUtils.errorTips(errMsg)
+        commonUtils.errorTips(errMsg)
+        commonUtils.doLogin()
 			}
 		)
 	},
