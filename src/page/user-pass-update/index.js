@@ -50,7 +50,6 @@ const passUpdatePage = {
 			status: false,
 			msg: '',
     }
-    console.log(formData);
 		if (!commonUtils.validata(formData.password, 'require')) {
 			result.msg = '原密码不能为空'
 			return result

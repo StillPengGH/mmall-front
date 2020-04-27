@@ -46,7 +46,6 @@ var userLoginPage = {
 			userService.login(
 				formData,
 				function (res) {
-					console.log(commonUtils.getUrlParamByKey('redirect'))
 					// 成功回调，跳转到url中执行的目标页面，没有的话跳转首页
 					window.location.href =
 						commonUtils.getUrlParamByKey('redirect') ||

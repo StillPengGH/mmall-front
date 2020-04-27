@@ -26,7 +26,6 @@ var cartPage = {
 				cartService.selectProduct(
 					productId,
 					function (res) {
-						console.log(res)
 						_this.renderCart(res)
 					},
 					function (errMsg) {
@@ -39,7 +38,6 @@ var cartPage = {
 				cartService.unselectProduct(
 					productId,
 					function (res) {
-						console.log(res)
 						_this.renderCart(res)
 					},
 					function (errMsg) {
@@ -137,7 +135,6 @@ var cartPage = {
 					)
 				}
 				if (productIdArr.length) {
-					console.log(productIdArr)
 					// 将arr数组每一项用逗号拼接位字符串
 					_this.deleteProduct(productIdArr.join(','))
 				} else {
