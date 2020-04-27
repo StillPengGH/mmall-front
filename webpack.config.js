@@ -20,16 +20,19 @@ var config = {
 	entry: {
 		common: ['./src/page/common/index.js'],
 		result: ['./src/page/result/index.js'],
-    index: ['./src/page/index/index.js'],
-    list:['./src/page/list/index.js'],
-    detail:['./src/page/detail/index.js'],
-    cart:['./src/page/cart/index.js'],
-    'user-login': ['./src/page/user-login/index.js'],
+		index: ['./src/page/index/index.js'],
+		list: ['./src/page/list/index.js'],
+		detail: ['./src/page/detail/index.js'],
+		cart: ['./src/page/cart/index.js'],
+		'user-login': ['./src/page/user-login/index.js'],
 		'user-register': ['./src/page/user-register/index.js'],
 		'user-pass-reset': ['./src/page/user-pass-reset/index.js'],
 		'user-pass-update': ['./src/page/user-pass-update/index.js'],
 		'user-center': ['./src/page/user-center/index.js'],
 		'user-center-update': ['./src/page/user-center-update/index.js'],
+		'order-confirm': ['./src/page/order-confirm/index.js'],
+		'order-list': ['./src/page/order-list/index.js'],
+		'order-detail': ['./src/page/order-detail/index.js'],
 	},
 	// 出口
 	output: {
@@ -97,8 +100,8 @@ var config = {
 		// 把css单独打包到文件里，否则将会打包在js文件中
 		new ExtractTextPlugin('css/[name]/[name].css'),
 		// html模板处理
-    new HtmlWebpackPulgin(getHtmlConfig('index', '首页')),
-    new HtmlWebpackPulgin(getHtmlConfig('list','产品列表')),
+		new HtmlWebpackPulgin(getHtmlConfig('index', '首页')),
+		new HtmlWebpackPulgin(getHtmlConfig('list', '产品列表')),
 		new HtmlWebpackPulgin(getHtmlConfig('detail', '产品详情页')),
 		new HtmlWebpackPulgin(getHtmlConfig('cart', '购物车')),
 		new HtmlWebpackPulgin(getHtmlConfig('result', '操作结果')),
@@ -108,6 +111,9 @@ var config = {
 		new HtmlWebpackPulgin(getHtmlConfig('user-pass-update', '密码修改')),
 		new HtmlWebpackPulgin(getHtmlConfig('user-center', '用户中心')),
 		new HtmlWebpackPulgin(getHtmlConfig('user-center-update', '用户中心')),
+		new HtmlWebpackPulgin(getHtmlConfig('order-confirm', '订单确认')),
+		new HtmlWebpackPulgin(getHtmlConfig('order-list', '订单列表')),
+		new HtmlWebpackPulgin(getHtmlConfig('order-detail', '订单详情')),
 	],
 	optimization: {
 		splitChunks: {

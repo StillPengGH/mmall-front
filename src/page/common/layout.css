@@ -120,7 +120,7 @@ a {
   padding: 10px;
   font-size: 14px;
   font-weight: bold;
-  border: 1px solid #eee;
+  border-bottom: 1px solid #eee;
   color: #666;
 }
 
