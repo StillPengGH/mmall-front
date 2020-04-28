@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%= require('html-loader!./layout/header-common.html') %>
+  <title><%= htmlWebpackPlugin.options.title%>-Yaoerba电商平台</title>
+</head>
+
+<body>
+  <%= require('html-loader!./layout/nav-simple.html')%>
+  <div class="page-wrap">
+    <div class="w">
+      <div class="user-con">
+        <div class="user-title">用户注册</div>
+        <div class="user-box">
+          <!-- 错误提示 -->
+          <div class="error-item">
+            <i class="fa fa-minus-circle error-icon"></i>
+            <p class="error-msg">Error</p>
+          </div>
+          <!-- 用户名 -->
+          <div class="user-item">
+            <label for="" class="user-label">
+              <i class="fa fa-user"></i>
+            </label>
+            <input type="text" class="user-input" id="username" placeholder="请输入用户名" autocapitalize="off" />
+          </div>
+          <!-- 密码 -->
+          <div class="user-item">
+            <label for="password" class="user-label">
+              <i class="fa fa-lock"></i>
+            </label>
+            <input type="password" class="user-input" id="password" placeholder="请输入密码" autocapitalize="off" />
+          </div>
+          <!-- 确认密码 -->
+          <div class="user-item">
+            <label for="password-comfirm" class="user-label">
+              <i class="fa fa-lock"></i>
+            </label>
+            <input type="password" class="user-input" id="password-comfirm" placeholder="请再次输入密码"
+              autocapitalize="off" />
+          </div>
+          <!-- 手机号 -->
+          <div class="user-item">
+            <label for="" class="user-label">
+              <i class="fa fa-phone"></i>
+            </label>
+            <input type="text" class="user-input" id="phone" placeholder="请输入手机号" autocapitalize="off" />
+          </div>
+          <!-- 邮箱 -->
+          <div class="user-item">
+            <label for="" class="user-label">
+              <i class="fa fa-envelope"></i>
+            </label>
+            <input type="text" class="user-input" id="email" placeholder="请输入邮箱" autocapitalize="off" />
+          </div>
+          <!-- 密码提示问题 -->
+          <div class="user-item">
+            <label for="" class="user-label">
+              <i class="fa fa-question"></i>
+            </label>
+            <input type="text" class="user-input" id="question" placeholder="请输入密码提示问题" autocapitalize="off" />
+          </div>
+          <!-- 密码提示问题答案 -->
+          <div class="user-item">
+            <label for="" class="user-label">
+              <i class="fa fa-key"></i>
+            </label>
+            <input type="text" class="user-input" id="answer" placeholder="请输入密码提示答案" autocapitalize="off" />
+          </div>
+          <!-- 注册按钮 -->
+          <a id="submit" class="btn btn-submit">注册</a>
+          <!-- 跳转登录连接-->
+          <div class="link-item">
+            <a href="./user-login.html" class="link">已有账号，去登录>></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <%= require('html-loader!./layout/footer.html')%>
+</body>
+
+</html>

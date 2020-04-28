@@ -88,3 +88,5 @@ sw.*
 *.swp
 
 config.js
+
+package-lock.json
