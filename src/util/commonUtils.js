@@ -4,7 +4,7 @@
  *@date: 2020-04-13 10:29:42
  *@version: V1.0.0
  */
-const Hogan = require('hogan')
+const Hogan = require('hogan.js')
 
 const conf = {
 	// 测试地址
