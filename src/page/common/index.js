@@ -4,3 +4,5 @@ require('./layout.css')
 require('node_modules/font-awesome/css/font-awesome.min.css')
 // 引入通用的footer样式
 require('./footer/index.css')
+// 引入警告样式
+require('./warning/index.css')

@@ -7,10 +7,11 @@
 const Hogan = require('hogan.js')
 
 const conf = {
-	// 测试地址
+	// 判断是否是开发环境，指定不同的serverHost
+	// 测试：http://localhost.charlesproxy.com:8089/
+	// 正式：http://www.yaoerba.com/
   //serverHost: 'http://localhost.charlesproxy.com:8089/',
-  // 正式地址
-  serverHost: 'http://www.yaoerba.com/'
+  serverHost: 'http://www.yaoerba.com/',
 }
 var commonUtils = {
 	// 1.通用网络请求方法
@@ -41,14 +42,17 @@ var commonUtils = {
 		})
 	},
 	// 2.统一跳转
-	doLogin: function () { // 去登录页
+	doLogin: function () {
+		// 去登录页
 		// 这里需要记录当前路径，以便登录后直接返回当前页面，并对当前页面url进行编码（防止特殊字符被截断问题）
 		window.location.href =
-			'./user-login.html?redirect=' + encodeURIComponent(window.location.href)
-  },
-  goHome:function(){ // 去首页
-    window.location.href = './index.html'
-  },
+			'./user-login.html?redirect=' +
+			encodeURIComponent(window.location.href)
+	},
+	goHome: function () {
+		// 去首页
+		window.location.href = './index.html'
+	},
 	// 3.获取服务器接口地址
 	getServerUrl: function (path) {
 		return conf.serverHost + path
