@@ -40,9 +40,10 @@ var config = {
 	// 出口
 	output: {
 		path: path.resolve(__dirname, 'dist'),
-		publicPath: isDev
-			? path.resolve(__dirname, 'dist')
-			: 'http://s.yaoerba.com/mmall-front/dist',
+		publicPath:
+			isDev === true
+				? ''
+				: 'http://s.yaoerba.com/mmall-front/dist',
 		filename: 'js/[name].bundle.js',
 	},
 	// 引入jquery（cdn方式），减少项目体积
