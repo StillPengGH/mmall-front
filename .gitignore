@@ -90,3 +90,5 @@ sw.*
 config.js
 
 package-lock.json
+
+.vscode

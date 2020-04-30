@@ -8,7 +8,9 @@ const Hogan = require('hogan.js')
 
 const conf = {
 	// 测试地址
-	serverHost: 'http://localhost.charlesproxy.com:8089/',
+  //serverHost: 'http://localhost.charlesproxy.com:8089/',
+  // 正式地址
+  serverHost: 'http://www.yaoerba.com/'
 }
 var commonUtils = {
 	// 1.通用网络请求方法
