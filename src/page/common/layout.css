@@ -64,7 +64,7 @@ a {
 }
 
 .link:hover {
-  color: #e80012;
+  color: #4aca6d;
 }
 
 /* 长得像超链的文字 */
@@ -82,7 +82,7 @@ a {
   vertical-align: middle;
   border: none;
   text-decoration: none;
-  background-color: #c60023;
+  background-color: #4aca6d;
   color: #fff;
   font-weight: bold;
   font-size: 17px;
@@ -127,4 +127,9 @@ a {
 .pannel .pannel-body {
   padding: 10px;
   overflow: hidden;
+}
+
+/* 字体绿 */
+.green {
+  color: #4aca6d;
 }

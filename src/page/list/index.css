@@ -15,9 +15,9 @@
 }
 
 .sort-con .sort-item.active {
-  background-color: #c60023;
+  background-color: #4aca6d;
   color: #fff;
-  border: 1px solid #c60023;
+  border: 1px solid #4aca6d;
 }
 
 .sort-con .sort-item .fa-sort-desc {
@@ -68,7 +68,7 @@
   height: 30px;
   line-height: 30px;
   font-size: 15px;
-  color: #c60023;
+  color: #4aca6d;
 }
 
 .p-list-con .p-item .p-name-con{

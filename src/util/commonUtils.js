@@ -10,8 +10,8 @@ const conf = {
 	// 判断是否是开发环境，指定不同的serverHost
 	// 测试：http://localhost.charlesproxy.com:8089/
 	// 正式：http://www.yaoerba.com/
-  //serverHost: 'http://localhost.charlesproxy.com:8089/',
-  serverHost: 'http://www.yaoerba.com/',
+  serverHost: 'http://localhost.charlesproxy.com:8089/',
+  //serverHost: 'http://www.yaoerba.com/',
 }
 var commonUtils = {
 	// 1.通用网络请求方法

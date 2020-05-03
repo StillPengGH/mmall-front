@@ -26,12 +26,12 @@
 }
 
 .keywords-list .keywords-item .link:hover {
-  color: #c60023;
+  color: #4aca6d;
 }
 
 /* 轮播图 */
 .banner-con {
-  width: 830px;
+  width: 640px;
   height: 370px;
   background-color: #eee;
   float: left;
@@ -137,4 +137,316 @@
   width: 80%;
   height: 75%;
   border: none;
+}
+
+/* 轮播图右侧两个广告 */
+.slogan-con {
+  width: 180px;
+  float: left;
+  margin-left: 10px;
+  overflow: hidden;
+}
+
+.slogan-con .slogan-item {
+  display: block;
+  width: 180px;
+  height: 180px;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.slogan-con .slogan-item:hover {
+  opacity: 0.6;
+}
+
+.slogan-con .slogan-item .s-img {
+  width: 100%;
+  height: 100%;
+}
+
+/* 限时秒杀 */
+.fast-buy {
+  width: 100%;
+  height: 240px;
+  background: #fff;
+  overflow: hidden;
+  text-align: center;
+  overflow: hidden;
+}
+
+.fast-buy .fast-title {
+  padding: 20px 0;
+  width: 200px;
+  height: 240px;
+  background-color: #4aca6d;
+  color: #fff;
+  float: left;
+}
+
+.fast-buy .fast-title .fast-text {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.fast-buy .fast-title .fa.fa-bolt {
+  font-weight: bold;
+  font-size: 40px;
+  margin-top: 30px;
+}
+
+.fast-buy .fast-title .fast-time {
+  font-weight: bold;
+  font-size: 14px;
+  margin-top: 30px;
+}
+
+.fast-list {
+  margin-left: 200px;
+  width: 880px;
+  height: 240px;
+  background-color: #fff;
+}
+
+.fast-list .fast-item {
+  width: 176px;
+  height: 240px;
+  float: left;
+  padding-top: 10px;
+}
+
+.fast-list .fast-item .f-img {
+  width: 170px;
+  height: 170px;
+}
+
+.fast-list .fast-item .link {
+  display: block;
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+
+.fast-list .fast-item .f-price {
+  width: 100px;
+  margin: 0 auto;
+  border: 1px solid #c60023;
+}
+
+.fast-list .fast-item .f-price .p-start {
+  display: block;
+  float: left;
+  width: 50px;
+  background-color: #c60023;
+  color: #fff;
+  font-weight: bold;
+}
+
+.fast-list .fast-item .f-price .p-end {
+  text-decoration: line-through;
+}
+
+/* 优质商家、品牌闪购 */
+.bus-brand-con {
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.bus-con {
+  width: 515px;
+  height: 340px;
+  background-color: #fff;
+  padding: 10px;
+  margin-right: 10px;
+  float: left;
+}
+
+.brand-con {
+  width: 515px;
+  height: 340px;
+  padding: 10px;
+  background-color: #fff;
+  float: left;
+}
+
+.bus-brand-con .bus-brand-title {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+}
+
+.bus-brand-con .bus-brand-title h1 {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 20px;
+  color: #333;
+  line-height: 32px;
+  cursor: pointer;
+}
+
+.bus-brand-con .bus-brand-title i {
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+}
+
+.bus-brand-con .bus-brand-title i:hover {
+  color: #4aca6d;
+}
+
+.bus-brand-con .bus-list {
+  display: flex;
+  flex-direction: row;
+}
+
+.bus-brand-con .bus-list .bus-item-first {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 175px;
+  height: 300px;
+  background-color: #F6F6F6;
+  margin-right: 10px;
+}
+
+.bus-brand-con .bus-list .bus-item-first .b-logo {
+  position: absolute;
+  left: 0;
+  background-color: #FFA000;
+  color: #fff;
+  font-weight: bold;
+  height: 22px;
+  line-height: 22px;
+  width: 80px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+}
+
+.bus-brand-con .bus-list .bus-item-first .b-img {
+  width: 144px;
+  height: 144px;
+  margin-top: 40px;
+}
+
+.bus-brand-con .bus-list .bus-item-first .b-title {
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+  color: #333;
+}
+
+.bus-brand-con .bus-list .bus-item-first .b-title:hover {
+  color: #4aca6d;
+}
+
+.bus-brand-con .bus-list .bus-item-first .b-price-con .price-now {
+  font-size: 22px;
+  color: #c60023;
+}
+
+.bus-brand-con .bus-list .bus-item-first .b-price-con .price-del {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.bus-brand-con .bus-list .bus-item-first .b-text {
+  margin-top: 10px;
+  color: #999;
+}
+
+.bus-brand-con .bus-list .bus-item-others {
+  width: 330px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.bus-brand-con .bus-list .bus-item-others .other {
+  display: flex;
+  flex-direction: row;
+  width: 160px;
+  height: 145px;
+  padding: 10px 0;
+}
+
+.bus-brand-con .bus-list .bus-item-others .other .img-con {
+  width: 90px;
+  height: 130px;
+  margin-right: 4px;
+}
+
+.bus-brand-con .bus-list .bus-item-others .other .img-con .o-img {
+  width: 90px;
+  height: 90px;
+  margin-top:10px;
+}
+
+.bus-brand-con .bus-list .bus-item-others .other .img-con .o-img-flg {
+  background: rgba(0, 0, 0, .6);
+  color: #fff;
+  text-align: center;
+}
+
+.bus-brand-con .bus-list .bus-item-others .other .desc-con .o-title {
+  color: #333;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.bus-brand-con .bus-list .bus-item-others .other .desc-con .o-price {
+  margin-top: 6px;
+  color: #c60023;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.bus-brand-con .bus-list .bus-item-others .other .desc-con .o-price-del {
+  margin-top: 2px;
+  text-decoration: line-through;
+  color: #999;
+}
+
+.bus-brand-con .bus-list .bus-item-others .other .desc-con .o-text {
+  margin-top: 10px;
+  color: #999;
+}
+
+.bus-brand-con .brand-list {
+  display: flex;
+  flex-direction: row;
+}
+
+.bus-brand-con .brand-list .brand-item-first {
+  width: 225px;
+  height: 300px;
+  background-color: #FDFAF6;
+  margin-right: 10px;
+  overflow: hidden;
+}
+
+.bus-brand-con .brand-list .brand-item-first .first-img{
+  width:100%;
+  height: 100%;
+}
+
+.bus-brand-con .brand-list .brand-item-others {
+  width: 280px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.bus-brand-con .brand-list .brand-item-others .other {
+  width: 135px;
+  height: 93px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.bus-brand-con .brand-list .brand-item-others .other img{
+  width: 135px;
+  height: 70px;
 }
