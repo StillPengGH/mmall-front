@@ -4,12 +4,12 @@
   top: 34px;
   display: block;
   font-size: 36px;
-  color: #c60023;
+  color: #4aca6d;
   font-weight: bold;
 }
 
 .header .search-con {
-  padding: 40px 0 30px 250px;
+  padding: 40px 0 40px 250px;
 }
 
 .header .search-con .search-input {
@@ -17,7 +17,7 @@
   height: 40px;
   line-height: 40px;
   padding-left: 10px;
-  border: 2px solid #c60023;
+  border: 2px solid #4aca6d;
   font-size: 15px;
   outline: none;
 }
@@ -36,5 +36,17 @@
   background-color: #eee;
   font-size: 14px;
   color:#888;
-  border-top: 2px solid #c60023;
+  border-top: 2px solid #4aca6d;
+}
+
+/* 关键词 */
+.keywords-con{
+  position: absolute;
+  left:250px;
+  bottom: 10px;
+}
+
+.keywords-con .keywords-text{
+  font-size: 14px;
+  margin-right: 10px;
 }

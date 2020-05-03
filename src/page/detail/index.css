@@ -36,7 +36,7 @@
 }
 
 .intro-wrap .p-img-con .p-img-item:hover {
-  border: 2px solid #c60023;
+  border: 2px solid #4aca6d;
 }
 
 .intro-wrap .p-img-con .p-img-item .p-img {
@@ -58,7 +58,7 @@
 
 .intro-wrap .p-info-con .p-subtitle {
   font-size: 15px;
-  color: #c60023;
+  color: #4aca6d;
   line-height: 30px;
 }
 
@@ -79,7 +79,7 @@
 }
 
 .intro-wrap .p-info-con .p-price-con .info {
-  color: #c60023;
+  color: #4aca6d;
   font-size: 18px;
 }
 
@@ -129,7 +129,7 @@
   background: #eee;
   border: 1px solid #ddd;
   overflow: hidden;
-  border-bottom: 1px solid #c60023;
+  border-bottom: 1px solid #4aca6d;
 }
 
 .detail-wrap .tab-list .tab-item {
@@ -143,7 +143,7 @@
 }
 
 .detail-wrap .tab-list .tab-item.active{
-  background: #c60023;
+  background: #4aca6d;
   color: #fff;
 }
 

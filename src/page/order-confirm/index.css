@@ -10,7 +10,7 @@
 }
 
 .address-item.active {
-  border: 2px dashed #c60023;
+  border: 2px dashed #4aca6d;
 }
 
 .address-item:hover,
@@ -115,7 +115,7 @@ td {
 
 .submit-con .submit-total {
   margin-right: 20px;
-  color: #c60023;
+  color: #4aca6d;
   font-size: 18px;
   font-weight: bold;
   vertical-align: middle;
