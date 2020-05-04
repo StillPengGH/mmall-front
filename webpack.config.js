@@ -101,7 +101,10 @@ var config = {
 					{
 						loader: 'html-loader',
 						options: {
-							minimize: true,
+							minimize: {
+								removeComments: false,
+								removeAttributeQuotes: false,
+							},
 						},
 					},
 				],
@@ -146,7 +149,7 @@ var config = {
 				// 	priority: -10,
 				// },
 				// locallib: {
-				// 	// 拆分指定文件
+				// 拆分指定文件
 				// 	test: /(src[\\/]page[\\/]locallib\.js)$/,
 				// 	name: 'locallib',
 				// 	chunks: 'initial',
