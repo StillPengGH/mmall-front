@@ -104,39 +104,48 @@
 }
 
 .floor-wrap .floor-list {
-  margin-right: -20px;
-  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .floor-wrap .floor-list .floor-item {
-  position: relative;
-  width: 200px;
-  height: 220px;
-  margin: 15px 20px 15px 0;
-  float: left;
-  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  width: 185px;
+  height: 250px;
   background-color: #fff;
+  padding: 10px 10px;
 }
 
 .floor-wrap .floor-list .floor-item:hover {
   box-shadow: 1px 1px 7px #ddd;
 }
 
-.floor-wrap .floor-list .floor-item .floor-text {
-  position: absolute;
-  top: 12px;
-  left: 20px;
-  font-size: 16px;
-  color: #555;
+.floor-wrap .floor-list .floor-item .floor-img {
+  width: 170px;
+  height: 170px;
+  border: none;
 }
 
-.floor-wrap .floor-list .floor-item .floor-img {
-  position: absolute;
-  right: 15px;
-  bottom: 10px;
-  width: 80%;
-  height: 75%;
-  border: none;
+.floor-wrap .floor-list .floor-item .floor-price {
+  margin-top: 4px;
+  font-size: 16px;
+  color: #c60023;
+  font-weight: bold;
+}
+
+.floor-wrap .floor-list .floor-item .h-limit {
+  display: inline-block;
+  height: 55px;
+  overflow: hidden;
+  color: #666;
+}
+
+.floor-wrap .floor-list .floor-item .h-limit:hover {
+  color: #4aca6d;
 }
 
 /* 轮播图右侧两个广告 */
@@ -380,7 +389,7 @@
 .bus-brand-con .bus-list .bus-item-others .other .img-con .o-img {
   width: 90px;
   height: 90px;
-  margin-top:10px;
+  margin-top: 10px;
 }
 
 .bus-brand-con .bus-list .bus-item-others .other .img-con .o-img-flg {
@@ -396,9 +405,10 @@
 }
 
 .bus-brand-con .bus-list .bus-item-others .other .desc-con .o-price {
-  margin-top: 6px;
+  display: inline-block;
+  margin-top: 10px;
   color: #c60023;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: bold;
 }
 
@@ -426,8 +436,8 @@
   overflow: hidden;
 }
 
-.bus-brand-con .brand-list .brand-item-first .first-img{
-  width:100%;
+.bus-brand-con .brand-list .brand-item-first .first-img {
+  width: 100%;
   height: 100%;
 }
 
@@ -446,7 +456,7 @@
   text-align: center;
 }
 
-.bus-brand-con .brand-list .brand-item-others .other img{
+.bus-brand-con .brand-list .brand-item-others .other img {
   width: 135px;
   height: 70px;
 }

@@ -133,3 +133,13 @@ a {
 .green {
   color: #4aca6d;
 }
+
+/* 更多 */
+.more{
+  position:absolute;
+  right: 0;
+  display: inline-block;
+  font-size:14px;
+  padding-right: 20px;
+  cursor: pointer;
+}
